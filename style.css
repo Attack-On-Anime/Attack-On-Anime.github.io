@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: clear;
-  src: url(Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf)
+  src: url(assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf)
 }
 
 @font-face {
   font-family: sf;
-  src: url(SFUIText/);
+  src: url(assets/font/SFUIText/);
 }
 
 @font-face {
   font-family: lemonR;
-  src: url(LEMONMILK-Regular.otf);
+  src: url(assets/font/LEMONMILK-Regular.otf);
 }
 
 @font-face {
   font-family: lemonL;
-  src: url(LEMONMILK-Light.otf);
+  src: url(assets/font/LEMONMILK-Light.otf);
 }
 
 * {
@@ -29,7 +29,7 @@
 
 body {
   color: white;
-  background: url(img/bckg1.png) center/cover;
+  background: url(assets/img/bckg1.png) center/cover;
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
@@ -365,7 +365,6 @@ footer{
   padding: 0px 50px;
   margin-top:10em;
   min-height: 2em;
-  min-width: 100%;
   background-color: black;
   border-top: rgba(118, 118, 243, 0.438) solid 3px;
 }
@@ -402,18 +401,14 @@ footer h3{
 }
 
 .copyright{
-  padding: 2em 2em;
+  padding: 2em 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .copyright h1{
   font-family: "Cherry Bomb One" ;
   color: white;
-}
-.c-copyright{
-  margin-right: 100px;
 }
 
 
