@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Cherry+Bomb+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 @font-face {
   font-family: clear;
@@ -51,99 +51,131 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 /* Nav */
+
 .navbar {
-  min-width:100%;
-  min-height: 10%;
+  display: flex;
+  justify-content: space-between;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.336);
-}
- 
-.navbar div{
-  display: flex;
-  justify-content: center;
-
+  font-family: lemonR;
 }
 
-.navbar div a h1{
-  display: flex;
-  width: 10em;
-  font-size: 2em;
+/* hidden */
+
+.hidden-menu{
+  display: none;
+}
+
+#hidden-title{
+  display: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
   color: white;
-  font-family: "Cherry Bomb One" ;
-  float:right;
+  font-family: "Cherry Bomb One";
 }
 
-.navbar div .social-bar{
+/* Div titre,menu  search-bar,menu */
+
+.navbar .left{
   display: flex;
   align-items: center;
 }
 
-.navbar div .social-bar li{
-  margin: 0 15px;
+.navbar .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar div .social-bar li a:hover{
-  filter: brightness(25%);
+
+/* title */
+
+#title {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 100;
 }
 
+#title:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
 
-.navbar div .search{
+/* social-panel */
+
+.social-panel ul {
   display: flex;
   align-items: center;
-  margin: 0 15em;
-  border: solid 1px rgba(0, 0, 0, 0.349);
-  border-radius: 10px;
+}
+.social-panel li {
+  margin-left: 20px;
+}
+
+.social-panel li:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
+
+/* Search-bar */
+.search-bar{
+  display: flex;
+  justify-content: end;
+}
+.search-bar ul {
+  width: 20em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #260a8a00;
+  border: solid rgba(0, 0, 0, 0.349) 1px;
+  border-radius: 1.5em;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.315);
-
+}
+.search-bar ul li:first-child {
+  margin-right: 20px;
 }
 
-.navbar div .search li:first-child{
-  margin-right: 10px;
-}
-
-
-#button{
-  background-color: rgba(240, 248, 255, 0);
+#button {
+  background-color: rgb(240, 248, 255,0);
   border: none;
   font-family: clear;
   font-size: large;
   font-weight: bolder;
   color: white;
-  width: 250px;
+  border-right: solid rgba(0, 0, 0, 0.349) 1px;
+  border-radius: 1.5em;;
+  width: 280px;
   height: 40px;
 }
 
-.navbar div .menu{
-  margin-left: 2%;
-  display: flex;
-  align-items: center;
+/* Menu */
 
-}
-
-.navbar div .menu li{
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
-}
-
-.navbar div .menu li a {
-  float:right;
-  line-height: 20px;
-  margin-left: 5px;
+.menu ul {
   font-family: lemonR;
-  color: white;
-
+  display: flex;
+  margin-left: 40px;
 }
-.navbar div .menu li:hover{
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.menu ul li:hover {
   filter: brightness(50%);
-
+  transition: 300ms;
 }
 
-.navbar .menu-hamburger {
-  display: none;
+.small-title {
+  margin-left: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
 }
-
-/* Header */
 
 /* Carousel */
 
@@ -361,102 +393,168 @@ section {
 }
 
 
+/* ----------------------- Footer ------------------ */
 footer{
-  padding: 0px 50px;
-  margin-top:10em;
-  min-height: 2em;
-  background-color: black;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: lemonR;
   border-top: rgba(118, 118, 243, 0.438) solid 3px;
 }
 
-footer ul{
+/* Division footer-info */
+footer .footer-info ul{
   display: flex;
-  padding: 40px 0px;
-  border-bottom: solid white 1px;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+footer .footer-info ul li{
+  margin-left: 50px;
 }
 
-footer li p{
-  font-family: Arial;
-  padding-top: 20px;
-  padding-right: 100px;
-  width: 400px;
-  color: rgb(117, 117, 117);
-  font-weight: bold;
-
-}
-
-footer h3{
-  font-family:lemonR ;
+.footer-info ul li h3{
   font-weight: 999em;
   color: rgb(221, 221, 221);
 }
 
-.contact p {
- margin-top: 20px;
- padding: 0;
+.footer-info ul li p{ 
+  margin-top: 20px;
+  font-family: Arial;
+  width: 400px;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
 }
-.title h1{
-  margin: 50px 0 ;
+.footer-info ul li:last-child p{
+  width: max-content; 
+}
+.footer-info ul li:last-child p:hover{
+  transition: 1s;
+  text-decoration: underline;
+
+}
+.footer-info .contact{
+  color: rgb(117, 117, 117);
 }
 
-.copyright{
-  padding: 2em 0;
+/* Division bottom-page */
+.bottom-page ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.bottom-page ul li .copyright{
+  font-family: Arial;
+  color: rgb(117, 117, 117);
+  font-weight: bolder;
 }
 
-.copyright h1{
-  font-family: "Cherry Bomb One" ;
-  color: white;
+@media screen  and (max-width: 1500px){
+  /*  ------------- navbar -------------------------*/
+  .menu ul {
+    margin-left: 0px;
+  }
+  
+  .menu ul li{
+    margin-left: 20px;
+  }
+  #setting{
+    display: none;
+  }
+
+  #profil{
+    display: none;
+  }
 }
 
+@media screen  and (max-width: 1300px){
+  /* ---------------------------- Navbar --------------------- */
+
+ #planning{
+   display: none;
+ }
+
+ #catalogue{
+   display: none;
+ }
+}
+
+@media screen  and (max-width: 1000px){
+  /* -------------------------- Nav ------------------ */
+
+  .menu{
+    display: none;
+  }
+  .social-panel{
+    display: none;
+  }
+
+  #title{
+    display: none;
+  }
+
+  .hidden-menu{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar #hidden-title{
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar ul {
+    width: 15em;
+    height: 1.5em;
+  }
+  #button{
+    width: 10em;
+    height: 1.5em;
+
+  }
+
+   /*  ------------- footer -------------------------*/
+
+   footer #title{
+    display: none;
+  }
+
+
+  footer .footer-info ul{
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer-info ul li{
+    margin-left: 0px;
+  }
+  .footer-info ul li:nth-child(2){
+    margin: 0 20px;
+
+  }
+
+  .footer-info ul li h3{
+    font-size: 0.7rem;
+  }
+
+  .footer-info ul li p{ 
+    width: 250px;
+    font-size: 0.8rem;
+}
+
+  .bottom-page ul{
+    display: flex;
+    justify-content: center;
+  }
+  footer #hidden-title{
+    display: flex;
+    margin-right: 20px;
+
+  }
+
+}
 
 @media screen and (max-width: 900px) {
-  .navbar .title {
-    position: absolute;
-    top: 50px;
-    left: 25px;
-    font-size: 1.5em;
-  }
-
-  .navbar {
-    padding: 0;
-  }
-  .navbar .menu-hamburger {
-    position: absolute;
-    display: block;
-    top: 50px;
-    left: 90%;
-  }
-  .nav-links {
-    top: 0;
-    left: 0;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.075);
-    backdrop-filter: blur(3px);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100%;
-    transition: all 0.25s ease;
-  }
-
-  .nav-links.mobile-menu {
-    margin: 0;
-  }
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar .nav-links ul li {
-    margin: 45px 0px;
-  }
+  
+  
 
   .carousel img{
     width: calc(100%);
@@ -464,9 +562,40 @@ footer h3{
 
 }
 
-@media screen and (max-width: 550px) {
-  .carousel img{
-    width: calc(100%);
+@media screen and (max-width:800px) {
+  /*  ------------- footer -------------------------*/
+
+  .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+    width: 180px;
   }
+
+}
+@media screen and (max-width:600px) {
+  /*  ------------- footer -------------------------*/
+
+  footer{ 
+    padding: 10px 0;
+   }
+
+  .footer-info ul li:nth-child(2){  /*  diminution du margin entre les paragraphes info*/
+    margin: 0 10px;
+  }
+
+  .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+    width: 150px;
+  }
+
+  .bottom-page .copyright{
+    font-size: 0.8rem;
+
+  }
+}
+@media screen and (max-width:550px) {
+  /*  ------------- footer -------------------------*/
+  
+  .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+    width: 100px;
+  }
+
 
 }

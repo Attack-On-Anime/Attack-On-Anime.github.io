@@ -44,50 +44,85 @@
                   </li>
   
                 </ul>
-                
-                <ul class="social-bar ">
-                  <li>
-                    <a href="http://daaca.ca/wp-content/uploads/2017/01/Donate-Now-Round-Silver-and-Lighter-Red-1024.jpg">
-                    <img src="../../../../assets/img/heart.png" height="30em"  /></a>
-                  </li>
-                  
-                  <li>
-                  <a class="click" href="https://discord.com/">
-                    <img src="../../../../assets/img/discord.png" height="25em"/></a>
-                  </li>
-  
-                  <li>
-                  <a class="click" href="https://instagram.com">
-                  <img src="../../../../assets/img/instagram.png" height="30em"/></a>
-                  </li>
-  
-                  <li>
-                    <a class="click" href="https://twitter.com">
-                    <img src="../../../../assets/img/twitter.png" height="29em"/></a>
-                  </li>
-                </ul>
+
+          
+                  <ul class="social-bar ">
+                    <div class="grid">
+                    <li>
+                    
+                      <a href="http://daaca.ca/wp-content/uploads/2017/01/Donate-Now-Round-Silver-and-Lighter-Red-1024.jpg">
+                      <img id="heart"  src="../../../../assets/img/heart.png" height="30em"  /></a>
+                    </li>
+
+                    
+                    <li>
+                    <a class="click" href="https://discord.com/">
+                      <img id="discord" src="../../../../assets/img/discord.png" height="25em"/></a>
+                    </li>
+    
+                    <li>
+                    <a class="click" href="https://instagram.com">
+                    <img id="instagram" src="../../../../assets/img/instagram.png" height="30em"/></a>
+                    </li>
+    
+                    <li>
+                      <a class="click" href="https://twitter.com">
+                      <img  id="twitter" src="../../../../assets/img/twitter.png" height="29em"/></a>
+                    </li>
+                  </div>
+                  </ul>
         </div>
       </nav>
     
     <section>
-      <div class="presentation">
-        <div class="template">
-        </div>
-        <h1>Shingeki no Kyojin</h1>
-        <h3>Saison 1</h3>
-        <div>
-          <ul class="langage">
-            <li><p>Vo</p></li>
-            <li><p>Vf</p></li>
-        </ul>
-        </div>
+      <div class="pub-left">
+
       </div>
 
-      <div class="player">
-      <iframe width=1000 height=450 src=https://video.sibnet.ru/shell.php?videoid=4965928&share=1></iframe>
-    </div>
+      <article>
+        <div class="presentation">
+          <div class="template">
+          </div>
+          <a href="../../Shingeki no Kyojin.html"><h1>Shingeki no Kyojin</h1></a>
+          <h3>Saison 1</h3>
+          <div>
+            <ul class="langage">
+              <li><p>Vo</p></li>
+              <li><p>Vf</p></li>
+            </ul>
+          </div>
+
+          <div class="button">
+            <select name="select" id="lecteur"><option>Episode 1</option><option>Episode 2</option><option>Episode 3</option><option>Episode 4</option><option>Episode 5</option><option>Episode 6</option><option>Episode 7</option><option>Episode 8</option><option>Episode 9</option><option>Episode 10</option><option>Episode 11</option><option>Episode 12</option><option>Episode 13</option><option>Episode 14</option><option>Episode 15</option><option>Episode 16</option><option>Episode 17</option><option>Episode 18</option><option>Episode 19</option><option>Episode 20</option><option>Episode 21</option><option>Episode 22</option><option>Episode 23</option><option>Episode 24</option><option>Episode 25</option></select>
+            <select name="lecteur" id="lecteur"><option>Lecteur 1</option><option>Lecteur 2</option></select>
+            <button onclick="selectLecteurAA" id="lecteur"> <p>Lecteur AA</p></button>
+          </div>
+            <div class="historique">
+              <h4>Dernier episode séléctioné : episode 1</h4>
+            </div>
+          <div class="episode">
+            <button> <i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i><p>PRECEDENT</p></button>
+            <button class="center"><i class="fa-solid fa-circle-arrow-down fa-lg" style="color: #ffffff;"></i><p>DERNIER EPISODE</p></button>
+            <button> <p>SUIVANT</p> <i class="fa-solid fa-circle-arrow-right fa-lg" style="color: #ffffff;"></i></button>
+          </div>
+        </div>
+
+          <div class="player">
+          <iframe width="80%" height="100%" src=https://video.sibnet.ru/shell.php?videoid=4965928&share=1></iframe>
+        </div>
+        <div class="episode">
+          <button> <i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i><p>PRECEDENT</p></button>
+          <button class="center"><i class="fa-solid fa-circle-arrow-down fa-lg" style="color: #ffffff;"></i><p>DERNIER EPISODE</p></button>
+          <button> <p>SUIVANT</p> <i class="fa-solid fa-circle-arrow-right fa-lg" style="color: #ffffff;"></i></button>
+        </div>
+      </article>
+      <div class="pub-right">
+      </div>
     </section>
 
+
+
+    
 
       <footer>
         <ul>
@@ -120,4 +155,10 @@
       </footer>
 </body>
 
+
+<script>
+  //images pas clic droit dessus
+  $('body').on('contextmenu', 'img', function(e){return false;});
+  
+  </script>
 </html>

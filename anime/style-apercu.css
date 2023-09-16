@@ -1,433 +1,738 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Cherry+Bomb+One&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-@font-face { font-family: clear; src: url(../assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf) } 
+@font-face {
+  font-family: clear;
+  src: url(../assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf);
+}
 
-@font-face { font-family: sf; src: url(../assets/font/SFUIText/); } 
+@font-face {
+  font-family: sf;
+  src: url(../assets/font/SFUIText/);
+}
 
-@font-face { font-family: lemonR; src: url(../assets/font/LEMONMILK-Regular.otf); } 
+@font-face {
+  font-family: lemonR;
+  src: url(../assets/font/LEMONMILK-Regular.otf);
+}
 
-* { margin: 0; 
-  padding: 0; 
-  text-decoration: none; 
-  list-style: none; 
-} 
-  body { 
-    color: white; 
-    background: url(../assets/img/bckg1.png) center/cover; 
-    min-height: 100vh; 
-    min-width: 100vw; 
-    overflow-x: hidden; 
-  }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
 
-body::-webkit-scrollbar{
+body {
+  color: white;
+  background: url(../assets/img/bckg1.png) center/cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
   width: 10px;
   background-color: rgb(0, 0, 0);
 }
 
-
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: #250a8a;
   border-radius: 10px;
 }
 
-body::-webkit-scrollbar-thumb:hover{
+body::-webkit-scrollbar-thumb:hover {
   background-color: #210464;
-
 }
+/* --------------------------------------------- Navbar ----------------------------------- */
 
-/* Nav */
 .navbar {
-  min-width:100%;
-  min-height: 10%;
+  display: flex;
+  justify-content: space-between;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.336);
-}
- 
-.navbar div{
-  display: flex;
-  justify-content: center;
-
+  font-family: lemonR;
 }
 
-.navbar div a h1{
-  display: flex;
-  width: 10em;
-  font-size: 2em;
+/* hidden */
+
+.hidden-menu{
+  display: none;
+}
+
+#hidden-title{
+  display: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
   color: white;
-  font-family: "Cherry Bomb One" ;
-  float:right;
+  font-family: "Cherry Bomb One";
 }
 
-.navbar div .social-bar{
+/* Div titre,menu  search-bar,menu */
+
+.navbar .left{
   display: flex;
   align-items: center;
 }
 
-.navbar div .social-bar li{
-  margin: 0 15px;
+.navbar .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar div .social-bar li a:hover{
-  filter: brightness(25%);
+
+/* title */
+
+#title {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 100;
 }
 
+#title:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
 
-.navbar div .search{
+/* social-panel */
+
+.social-panel ul {
   display: flex;
   align-items: center;
-  margin: 0 15em;
-  border: solid 1px rgba(0, 0, 0, 0.349);
-  border-radius: 10px;
+}
+.social-panel li {
+  margin-left: 20px;
+}
+
+.social-panel li:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
+
+/* Search-bar */
+.search-bar{
+  display: flex;
+  justify-content: end;
+}
+.search-bar ul {
+  width: 20em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #260a8a00;
+  border: solid rgba(0, 0, 0, 0.349) 1px;
+  border-radius: 1.5em;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.315);
-
+}
+.search-bar ul li:first-child {
+  margin-right: 20px;
 }
 
-.navbar div .search li:first-child{
-  margin-right: 10px;
-}
-
-
-#button{
-  background-color: rgba(240, 248, 255, 0);
+#button {
+  background-color: rgb(240, 248, 255,0);
   border: none;
   font-family: clear;
   font-size: large;
   font-weight: bolder;
   color: white;
-  width: 250px;
+  border-right: solid rgba(0, 0, 0, 0.349) 1px;
+  border-radius: 1.5em;;
+  width: 280px;
   height: 40px;
 }
 
-.navbar div .menu{
-  margin-left: 2%;
-  display: flex;
-  align-items: center;
+/* Menu */
 
-}
-
-.navbar div .menu li{
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
-}
-
-.navbar div .menu li a {
-  float:right;
-  line-height: 20px;
-  margin-left: 5px;
+.menu ul {
   font-family: lemonR;
-  color: white;
-
+  display: flex;
+  margin-left: 40px;
 }
-.navbar div .menu li:hover{
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.menu ul li:hover {
   filter: brightness(50%);
-
+  transition: 300ms;
 }
 
-.navbar .menu-hamburger {
+.small-title {
+  margin-left: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* ---------------------------------- Section --------------------------------------------------*/
+
+section{
+  margin:4em;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.336);
+  height: max-content;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 0.5fr 1fr 3fr;
+  grid-row-gap: 20px;
+  position: relative;
+  font-family: lemonR;
+}
+
+.medium-title{
+  font-size: 1.5rem;
+  font-family: clear;
+  border-bottom: rgba(255, 255, 255, 0.384) solid 2px;
+  padding-bottom: 5px;
+}
+
+/* Head-overlay + info */
+.head-overlay{
+  position: absolute;
+  top: 0;
+  left: 50px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.head-overlay .overlay{
+  background:url(../assets/anime-img/Death\ Note.png) center/cover;
+  width: 20em;
+  height: 25em;
+  border: solid rgb(12, 12, 12) 5px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.315);
+}
+
+.head-overlay .overlay:hover{
+  filter: brightness(80%);
+  transition: 500ms;
+}
+
+.head-overlay .info li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 30px;
+  font-size: 0.6rem;
+}
+
+.hidden-title-anime{
+  font-family: clear;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
   display: none;
+  
 }
-
-/* Header */
-
-/* Carousel */
-
-.wrapper {
-  max-width: 100%;
+.hidden-title-anime .tag{
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 12px 15px 2px 1px rgba(0, 0, 0, 0.562);
-}
-.wrapper i {
-  top: 50%;
-  position: absolute;
-  color: white;
-  height: 46px;
-  width: 46px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 46px;
-  border-radius: 50%;
-  background-color: rgba(90, 85, 85, 0.479);
-  transform: translateY(-50%);
 }
 
-.wrapper i:hover{
-  border: solid rgba(90, 85, 85, 0.856) ;
-}
+/* Anime title */
 
-.wrapper i:first-child {
-  left: 10px;
-  display: none;
-}
+  .head{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-family: clear;
+  }
 
-.wrapper i:last-child {
-  right: 10px;
-}
+  .head-title{
+    font-size: 2.5em;
+  }
 
-.carousel {
-  overflow: hidden;
-  font-size: 0px;
-  cursor: pointer;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-}
+  #nametag{
+    font-size: 0.6rem;
+    color: rgb(156, 154, 154);
+  }
 
-.carousel.dragging{
-cursor: grab;
-scroll-behavior: auto;
-}
+  .tag{
+    margin-top: 20px;
+  }
 
-.carousel.dragging img{
-  pointer-events: none;
+  .tag li:hover{
+    transition: 300ms;
+    background-color:#784fd8;
+  }
 
-}
+  .action{
+    border-radius: 10px;
+    background-color: #8d67e696;
+    padding: 5px;
+    width: max-content;
+    cursor: pointer;
+  }
+  .action p{
+    width: max-content;
+    text-align: center;
+  }
 
-.carousel.no-transition{
-scroll-behavior: auto;
-}
+/* Synopsis */
 
-.carousel img {
-  height: 220px;
-  object-fit: cover;
-  width: calc(100%);
-  margin-left: 14px;
-}
+  .synopsis{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-family: sans-serif;
+  }
 
-.carousel img:first-child {
-  margin-left: 0px;
-}
+  .synopsis p{
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.719);
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 130%;
+    width: 100%;
+  }
+/* Content anime */
 
+  .content{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  }
 
+  .episode{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-row-gap: 50px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(40, 40, 46, 0.3);
+  }
+
+  .content .episode:last-child{
+    grid-template-rows: 1fr ;
+
+  }
+
+  .episode li{
+    background: url(../assets/anime-img/E-Death\ Note.jpg) center/cover;
+    width: 150px;
+    height: 100px;
+    border: solid rgb(255, 255, 255) 2px;
+    font-weight: 800;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .content .episode li p{
+    margin: auto; /* Important */
+    font-family: clear;
+    font-size: 1.25rem;
+    text-align: center;
+    color: white;
+  }
+  .content .episode li:hover{
+    transition: 300ms;
+    filter: brightness(80%);
+  }
+  /* Div pub */
+  .pub{
+    position: relative;
+    top: 20%;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    height: 80%;
+    width: 85%;
+    text-align:center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.25fr;
+  }
+/* ---------------------------------- Footer ----------------------------------------------------*/
 
 footer{
-  padding: 0px 50px;
-  min-height: 2em;
-  background-color: black;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: lemonR;
   border-top: rgba(118, 118, 243, 0.438) solid 3px;
 }
 
-footer ul{
+/* Division footer-info */
+footer .footer-info ul{
   display: flex;
-  padding: 40px 0px;
-  border-bottom: solid white 1px;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+footer .footer-info ul li{
+  margin-left: 50px;
 }
 
-footer li p{
-  font-family: Arial;
-  padding-top: 20px;
-  padding-right: 100px;
-  width: 400px;
-  color: rgb(117, 117, 117);
-  font-weight: bold;
-
-}
-
-footer h3{
-  font-family:lemonR ;
+.footer-info ul li h3{
   font-weight: 999em;
   color: rgb(221, 221, 221);
 }
 
-.contact p {
- margin-top: 20px;
- padding: 0;
+.footer-info ul li p{ 
+  margin-top: 20px;
+  font-family: Arial;
+  width: 400px;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
 }
-.title h1{
-  margin: 50px 0 ;
+.footer-info ul li:last-child p{
+  width: max-content; 
+}
+.footer-info ul li:last-child p:hover{
+  transition: 1s;
+  text-decoration: underline;
+
+}
+.footer-info .contact{
+  color: rgb(117, 117, 117);
 }
 
-.copyright{
-  padding: 2em 0;
+/* Division bottom-page */
+.bottom-page ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.bottom-page ul li .copyright{
+  font-family: Arial;
+  color: rgb(117, 117, 117);
+  font-weight: bolder;
+}
+/* ------------------------------------------------------------------------------------------- */
+@media screen  and (max-width: 1600px){
+
+  /* -------------- Section ------------------------*/
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-row-gap: 20px;
+  }
 }
 
-.copyright h1{
-  font-family: "Cherry Bomb One" ;
-  color: white;
-}
 
-/* Section */
-section{
-  margin: 50px;
-  display: flex;
-}
-
-.info{
-  height: 50em;
-  background-color: rgba(0, 0, 0, 0.425);
-  padding: 2em;
-  display: flex;
-  justify-content: end
-}
-
-.info .head-overlay{
-  position: absolute;
-  top: 20%;
-  left: 10%;
-
-}
-
-.info .overlay{
-  background: url(../assets/anime-img/Attack\ on\ Titan.png) center/cover;
-  width: 20em;
-  height: 25em;
-  border: solid white 5px;
-}
-
-.info .head-overlay .review{
-  font-family: LemonR;
-  font-size: 0.6em;
-  font-weight: 100;
-
-}
-
-.review li{
-  margin-top: 5px;
-  padding: 0 20px;
-}
-.review li ul{
-  display: flex;
-  justify-content: space-between;
-}
-.info-content{
-  position: absolute;
-}
-.info .head{
-  justify-content: start;
-  width: 70%;
-  min-height: 30%;
-  font-family: clear;
-}
-
-.info .head h2{
-  font-size: 2rem;
-  padding-bottom: 10px;
-  margin-top: 3em;
-}
-.info .head #nametag{
-  font-size: 0.6rem;
-  color: rgb(156, 154, 154);
-}
-
-.head .tag{
-  margin-top: 1em;
-}
-.tag li{
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #8d67e696;
-  width: 4em;
-  text-align: center;
-  cursor: pointer;
-}
-
-.tag li:hover{
-  background-color:#6741c0;
-}
-
-.head .content{
-  margin-top: 20px;
-  font-size: 1.5em;
-}
-.head .content .synopsis h4{
-  padding-bottom: 5px;
-  border-bottom: rgba(255, 255, 255, 0.384) solid 2px;
-}
-.synopsis p{
-  text-align: left;
-  margin: 20px 0;
-  color: rgba(255, 255, 255, 0.719);
-  font-family:sans-serif;
-  line-height: 120%;
-  font-size: 0.6em;
-  font-weight: 500;
-}
-.head .content .medium-title{
-  border-bottom: rgba(255, 255, 255, 0.384) solid 2px;
-}
-.head .content .medium-title:last-child{
-  margin-top: 20px;
-}
-
-.head .content .episode{
-  display: flex;
-}
-
-.head .content .episode li{
-  background: url(../assets/anime-img/Attack\ on\ Titan-episode.jpg) center/cover;
-  margin: 20px 0 20px 20px;
-  width: 150px;
-  height: 100px;
-  border: solid rgb(255, 255, 255) 2px;
-  font-weight: 800;
-  border-radius: 10px;
-  display: flex;
-  cursor: pointer;
-}
-
-.head .content .episode li p{
-  margin: auto; /* Important */
-  text-align: center;
-  color: white;
-}
-.head .content .episode li:hover{
-  filter: brightness(80%);
-}
-
-@media screen and (max-width: 900px) {
-  .navbar .title {
-    position: absolute;
-    top: 50px;
-    left: 25px;
-    font-size: 1.5em;
+@media screen  and (max-width: 1500px){
+  /*  ------------- navbar -------------------------*/
+  .menu ul {
+    margin-left: 0px;
+  }
+  
+  .menu ul li{
+    margin-left: 20px;
+  }
+  #setting{
+    display: none;
   }
 
-  .navbar {
-    padding: 0;
+  #profil{
+    display: none;
   }
-  .navbar .menu-hamburger {
-    position: absolute;
-    display: block;
-    top: 50px;
-    left: 90%;
+  /* -------------- Section ------------------------*/
+  section{
+    padding: 20px;
   }
-  .nav-links {
+
+  .head-overlay .overlay{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  .head-overlay{
     top: 0;
-    left: 0;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.075);
-    backdrop-filter: blur(3px);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100%;
-    transition: all 0.25s ease;
+    left:0;
   }
 
-  .nav-links.mobile-menu {
-    margin: 0;
+  /*  ------------- footer -------------------------*/
+
+  .footer-info ul li p{ 
+    width: 300px;
   }
-  .nav-links ul {
+
+
+}
+@media screen  and (max-width: 1450px){
+  
+  /* -------------- Section ------------------------*/
+  
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-row-gap: 20px;
+
+  }
+}
+
+@media screen  and (max-width: 1300px){
+   /* ---------------------------- Navbar --------------------- */
+
+  #planning{
+    display: none;
+  }
+
+  #catalogue{
+    display: none;
+  }
+  /* ---------------------------- Section --------------------- */
+
+  section{
+    grid-template-columns: 30% 70%;
+    margin: 1em;
+    padding: 1em;
+  }
+
+
+  .synopsis p{
+    font-size: 0.8rem;
+  }
+
+  .head-overlay .overlay{
+    width: 18em;
+    height: 23em;
+  }
+
+}
+@media screen and (max-width:1100px) {
+
+/* --------------------- Section ---------------- */
+  .head-overlay .overlay{
+    width: 15em;
+    height: 20em;
+  }
+
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr ;
+
+  }
+  
+}
+@media screen  and (max-width: 1000px){
+  /* -------------------------- Nav ------------------ */
+
+  .menu{
+    display: none;
+  }
+  .social-panel{
+    display: none;
+  }
+
+  #title{
+    display: none;
+  }
+
+  .hidden-menu{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar #hidden-title{
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar ul {
+    width: 15em;
+    height: 1.5em;
+  }
+  #button{
+    width: 10em;
+    height: 1.5em;
+
+  }
+    /* ---------------- Section ----------------------- */
+
+
+    /*  ------------- footer -------------------------*/
+
+    footer #title{
+      display: none;
+    }
+  
+
+    footer .footer-info ul{
+      display: flex;
+      justify-content: center;
+    }
+    footer .footer-info ul li{
+      margin-left: 0px;
+    }
+    .footer-info ul li:nth-child(2){
+      margin: 0 20px;
+
+    }
+
+    .footer-info ul li h3{
+      font-size: 0.7rem;
+    }
+
+    .footer-info ul li p{ 
+      width: 250px;
+      font-size: 0.8rem;
+  }
+
+    .bottom-page ul{
+      display: flex;
+      justify-content: center;
+    }
+    footer #hidden-title{
+      display: flex;
+      margin-right: 20px;
+
+    }
+  
+}
+
+@media screen and (max-width:950px) {
+  /* ----------------------- Section ------------------------------*/
+  section{
     display: flex;
     flex-direction: column;
+    align-items:center;
     justify-content: center;
-    align-items: center;
+    padding: 2em;
+
+  }
+  .head-overlay{
+      position: static;
+
   }
 
-  .navbar .nav-links ul li {
-    margin: 45px 0px;
+  .head-overlay .overlay{
+    width: 30em;
+    height: 35em;
   }
 
-  .carousel img{
-    width: calc(100%);
+  .head{
+    display: none;
+  }
+
+  .hidden-title-anime{
+    display:grid;
+  }
+
+  .synopsis p{
+    width: 716px;
+  }
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-column-gap: 20px;
+    grid-template-rows: 1fr 1fr ;
+
+  }
+  .pub{
+    height: 20em;
+    width: 90%;
   }
 
 }
+
+@media screen and (max-width:800px) {
+    /*  ------------- footer -------------------------*/
+  
+    .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+      width: 180px;
+    }
+  
+}
+@media screen and (max-width:780px) {
+  /* ----------------------- Section ------------------------------*/
+  .synopsis p{
+    width: 542px;
+  }
+
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr ;
+  }
+
+  
+}
+
+@media screen and (max-width:650px) {
+
+  /* --------------- Section ------------------------ */
+  
+
+  .head-overlay .overlay{
+    width: 25em;
+    height: 30em;
+    border: solid white 5px;
+  }
+
+  
+}
+
+@media screen and (max-width:600px) {
+
+  /* --------------- Section ------------------------ */
+  section{
+    padding: 0;
+  }
+
+
+  .synopsis p{
+    width: 482px;
+  }
+
+  .content .episode{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+  }
+
+  .episode li{
+    width: 130px;
+    height: 80px;
+  }
+
+   /*  ------------- footer -------------------------*/
+
+   footer{ 
+    padding: 10px 0;
+   }
+
+  .footer-info ul li:nth-child(2){  /*  diminution du margin entre les paragraphes info*/
+    margin: 0 10px;
+  }
+
+  .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+    width: 150px;
+  }
+
+  .bottom-page .copyright{
+    font-size: 0.8rem;
+
+  }
+}
+
+@media screen and (max-width:550px) {
+  /* --------------- Section ------------------------  */
+
+  .head-overlay .overlay{
+    background:url(../assets/anime-img/Attack\ on\ Titan.png) center/cover;
+    width: 20em;
+    height: 25em;
+  }
+  
+  .synopsis p{
+    width: 338px;
+  }
+
+  .content .episode{
+    padding: 10px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+  }
+
+   /*  ------------- footer -------------------------*/
+  
+   .footer-info ul li p{   /*  diminution de la taille  des paragraphes info*/
+    width: 100px;
+  }
+}
+ 

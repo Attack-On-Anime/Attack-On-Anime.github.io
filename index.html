@@ -15,59 +15,81 @@
   <body>
     <!-- barre de recherche/ catalogue/chaîne d'animé en directe.../mon compte -->
     <nav class="navbar">
-      <div>
-        <a href="index.html"><h1>Attack Of Anime</h1></a>
-          <ul class="menu">
+      <div class="hidden-menu">
+        <img src="../../assets/img/menu.png" alt="">
+      </div>
 
-              <li>
-                  <a href="tous_les_animes.html"> <img src="assets/img/catalogue.png"><a href="tous_les_animes.html">Catalogue</a></a>
-              </li>
+      <div class="left">
+        <div class="title-bar">
+          <a href="../../index.html"><h1 id="title">Attack On Anime</h1></a>
+        </div>
 
-              <li>
-                  <a href="profil.html"> <img src="assets/img/profil.png" alt=""><a href="profil.html">Profil</a></a>
-              </li>
+        <div class="social-panel">
+          <ul>
+            <li>
+              <a class="click" href="https://discord.com/">
+              <img src="../../assets/img/discord.png" height="15em"/></a>
+            </li>
 
-              <li>
-                  <a href="setting.html"> <img src="assets/img/parametres.png" alt=""><a  href="setting.html">Paramètre</a></a>
-              </li>
+            <li>
+              <a class="click" href="https://instagram.com">
+              <img src="../../assets/img/instagram.png" height="20em"/></a>
+            </li>
+
+            <li>
+              <a class="click" href="https://twitter.com">
+              <img src="../../assets/img/twitter.png" height="20em"/></a>
+            </li>
+
+            <li>
+              <a href="http://daaca.ca/wp-content/uploads/2017/01/Donate-Now-Round-Silver-and-Lighter-Red-1024.jpg">
+              <img src="../../assets/img/heart.png" height="22em"  /></a>  
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="search-bar">
+          <ul>
+            <li>
+              <i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-lg"></i>
+            </li>
+
+            <li>
+              <input
+              type="search"placeholder=" Trouve ton Anime !" id="button"/>
+            </li>
 
           </ul>
-              
-          <ul class="search">
+        </div>
 
-              <li>
-                  <i class="fa-solid fa-magnifying-glass fa-flip-horizontal fa-lg"></i>
-              </li>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="../../tous_les_animes.html"> <img src="../../assets/img/catalogue.png" ><a class="small-title" id="catalogue"  href="../../tous_les_animes.html">Catalogue</a></a>
+            </li>
 
-              <li>
-                  <input type="search"placeholder="Trouve ton Anime !" id="button"/>
-              </li>
+            <li>
+              <a href="../../planning.html"> <img src="../../assets/img/planning.png" alt=""><a class="small-title" id="planning"  href="../../planning.html">Planning</a></a>
+            </li>
 
-            </ul>
-              
-            <ul class="social-bar ">
-              <li>
-                  <a href="http://daaca.ca/wp-content/uploads/2017/01/Donate-Now-Round-Silver-and-Lighter-Red-1024.jpg">
-                  <img src="assets/img/heart.png" height="30em"  /></a>
-              </li>
-                
-              <li>
-                <a class="click" href="https://discord.com/">
-                  <img src="assets/img/discord.png" height="25em"/></a>
-              </li>
+            <li>
+              <a href="../../profil.html"> <img src="../../assets/img/profil.png" alt=""><a class="small-title" id="profil"  href="../../profil.html">Profil</a></a>
+            </li>
 
-              <li>
-                <a class="click" href="https://instagram.com">
-                <img src="assets/img/instagram.png" height="30em"/></a>
-              </li>
+            <li>
+              <a href="../../setting.html"> <img src="../../assets/img/parametres.png" alt=""><a class="small-title" id="setting"  href="../../setting.html">Paramètre</a></a>
+            </li>
 
-              <li>
-                  <a class="click" href="https://twitter.com">
-                  <img src="assets/img/twitter.png" height="29em"/></a>
-              </li>
+          </ul>
 
-            </ul>
+
+      
+        </div>
+        <a href="../../index.html"><img src="../../assets/img/logo.png" id="hidden-title" alt="" height="50px" width="50px"></a>
       </div>
+
     </nav>
     
 
@@ -211,12 +233,12 @@
                   <ul>
                     <li>
                       <div class="image-zoom">
-                      <a href="anime/Saga-Dragon-Ball/Dragon-Ball-apercu.html"><img src="assets/anime-img/Dragon Ball.jpg" class="anime" alt=""></a>  
+                      <a href="anime/Saga-Dragon-Ball/Sage-Dragon-Ball-apercu.html"><img src="assets/anime-img/Dragon Ball.jpg" class="anime" alt=""></a>  
                       </div>
                     </li>
 
                     <li>
-                      <a href="anime/Saga-Dragon-Ball/Dragon-Ball-apercu.html class=" class="band-title"  ><h4>Dragon Ball</h4></a>
+                      <a href="anime/Saga-Dragon-Ball/Sage-Dragon-Ball-apercu.html" class="band-title"  ><h4>Dragon Ball</h4></a>
                     </li>
 
                     <li>
@@ -670,34 +692,39 @@
     </section>
     <!-- description du site/ légalité /contact  logo en bas et Copyright -->
     <footer>
-      <ul>
-        <li>
-          <h3>QUI SOMMES-NOUS ?</h3>
-					<p >Attack on Anime est un site de référencement d'anime sans publicités dérangeantes, créé par un étudiant passionné de l&#8216;animation japonaise et du divertissement APAC.</p>
-        </li>
 
-        <li>
-          <h3>LÉGAL</h3>
-          <p >Attack on Anime n'héberge aucune vidéo sur son serveur. Veuillez conctacter directement les plateformes d'hébergement pour toutes réclamations de droits relatifs aux contenus en question.</p>
-        </li>
-
-        <li class="contact">
-
-            
+      <div class="footer-info">
+        <ul>
+          <li>
+            <h3>QUI SOMMES-NOUS ?</h3>
+            <p >Attack On Anime est un site de référencement d'anime sans publicités dérangeantes, créé par un étudiant passionné de l&#8216;animation japonaise et du divertissement APAC.</p>
+         </li>
+  
+          <li>
+            <h3>LÉGAL</h3>
+            <p >Attack On Anime n'héberge aucune vidéo sur son serveur. Veuillez conctacter directement les plateformes d'hébergement pour toutes réclamations de droits relatifs aux contenus en question.</p>
+          </li>
+  
+          <li> 
             <h3>CONTACT</h3>
-            <p><a>Discord</a></p>
-            <p><a>Twitter</a></p>
-            <p><a>Instagram</a></p>
-            <p><a>Donation</a></p>
-        </li>
-      </ul>
-      <div class="copyright">
-          <a href="index.html"><h1>Attack Of Anime</h1></a>
-          <a>© 2023 Anime-Sama - Tous droits réservés.</a>
-        </div>
-        
+            <p><a class="contact" href="https://discord.com/">Discord</a></p>
+            <p><a class="contact" href="https://twitter.com">Twitter</a></p>
+            <p><a class="contact" href="https://instagram.com">Instagram</a></p>
+            <p><a class="contact" href="http://daaca.ca/wp-content/uploads/2017/01/Donate-Now-Round-Silver-and-Lighter-Red-1024.jpg">Donation</a></p>
+          </li>
+        </ul>
       </div>
+      
+      <div class="bottom-page">
+        <ul>
+          <li><a href="../../index.html"><h1 id="title">Attack On Anime</h1></a></li>
+          <li><a href="../../index.html"><img src="../../assets/img/logo.png" id="hidden-title" alt="" height="50px" width="50px"></a></li>
+          <li><a class="copyright">© 2023 Attack-On-Anime - Tous droits réservés.</a></li>
+        </ul>
+      </div>
+  
     </footer>
+  
   </body>
 
   </html>

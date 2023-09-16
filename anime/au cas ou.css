@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Cherry+Bomb+One&display=swap");
+
+@font-face {
+  font-family: clear;
+  src: url(../assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf);
+}
+
+@font-face {
+  font-family: sf;
+  src: url(../assets/font/SFUIText/);
+}
+
+@font-face {
+  font-family: lemonR;
+  src: url(../assets/font/LEMONMILK-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  color: white;
+  background: url(../assets/img/bckg1.png) center/cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #250a8a;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #210464;
+}
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.336);
+  font-family: lemonR;
+}
+
+/* hidden */
+
+.hidden-menu{
+  display: none;
+}
+
+#hidden-title{
+  display: none;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Cherry Bomb One";
+}
+
+/* Div titre,menu  search-bar,menu */
+
+.navbar .left{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* title */
+
+#title {
+  font-size: 2rem;
+  color: white;
+  font-family: "Cherry Bomb One";
+
+}
+
+#title:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
+
+/* social-panel */
+
+.social-panel ul {
+  display: flex;
+  align-items: center;
+}
+.social-panel li {
+  margin-left: 20px;
+}
+
+.social-panel li:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
+
+/* Search-bar */
+.search-bar{
+  display: flex;
+  justify-content: end;
+}
+.search-bar ul {
+  width: 20em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #260a8a00;
+  border: solid rgba(0, 0, 0, 0.349) 1px;
+  border-radius: 1.5em;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.315);
+}
+.search-bar ul li:first-child {
+  margin-right: 20px;
+}
+
+#button {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  font-family: clear;
+  font-size: large;
+  font-weight: bolder;
+  color: white;
+  width: 250px;
+  height: 40px;
+}
+
+/* Menu */
+
+.menu ul {
+  font-family: lemonR;
+  display: flex;
+  margin-left: 40px;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.menu ul li:hover {
+  filter: brightness(50%);
+  transition: 300ms;
+}
+
+.small-title {
+  margin-left: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer{
+  padding: 0px 50px;
+  min-height: 2em;
+  background-color: black;
+  border-top: rgba(118, 118, 243, 0.438) solid 3px;
+}
+
+footer ul{
+  display: flex;
+  padding: 40px 0px;
+  border-bottom: solid white 1px;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
+footer li p{
+  font-family: Arial;
+  padding-top: 20px;
+  padding-right: 100px;
+  width: 400px;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
+
+}
+
+footer h3{
+  font-family:lemonR ;
+  font-weight: 999em;
+  color: rgb(221, 221, 221);
+}
+
+.contact p {
+ margin-top: 20px;
+ padding: 0;
+}
+.title h1{
+  margin: 50px 0 ;
+}
+
+.copyright{
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright h1{
+  font-family: "Cherry Bomb One" ;
+  color: white;
+}
+
+/* Section */
+section{
+  margin: 30px;
+}
+
+.info{
+  position: relative;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1.5fr 1.5fr 2fr;
+  grid-column-gap: 20px;
+  min-height: 50em;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.425);
+}
+
+.info .overlay{
+  background: url(../assets/anime-img/Attack\ on\ Titan.png) center/cover;
+  width: 20em;
+  height: 25em;
+  border: solid white 5px;
+}
+.info .head-overlay{
+  position: absolute;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.info .head-overlay .review{
+  font-family: LemonR;
+  font-size: 0.6em;
+  font-weight: 100;
+}
+
+.review li{
+  margin-top: 5px;
+  padding: 0 20px;
+}
+.review li ul{
+  display: flex;
+  justify-content: space-between;
+}
+.info-content{
+  position: absolute;
+}
+.info .head{
+  grid-column-start: 2;
+  font-family: clear;
+  width: fit-content;
+}
+
+.info .head h2{
+  font-size: 2rem;
+  padding-bottom: 10px;
+  margin-top: 3em;
+}
+.info .head #nametag{
+  font-size: 0.6rem;
+  color: rgb(156, 154, 154);
+}
+
+.head .tag{
+  margin-top: 1em;
+}
+.tag li{
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #8d67e696;
+  width: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tag li:hover{
+  background-color:#6741c0;
+}
+
+.info .synopsis{
+  grid-row-start: 2;
+  grid-column-start: 2;
+  font-size: 1.5em;
+}
+.synopsis h4{
+  padding-bottom: 5px;
+  border-bottom: rgba(255, 255, 255, 0.384) solid 2px;
+}
+.synopsis p{
+  text-align: left;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.719);
+  font-family:sans-serif;
+  line-height: 120%;
+  white-space: normal;
+  font-size: 0.6em;
+  font-weight: 500;
+}
+
+.content{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  font-size: 1.5rem;
+
+}
+.medium-title{
+  font-size: 1.5rem;
+  font-family: clear;
+  border-bottom: rgba(255, 255, 255, 0.384) solid 2px;
+}
+.content .medium-title:last-child{
+  margin-top: 20px;
+}
+
+.episode{
+  display: grid;
+  grid-template-rows: 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.content .episode li{
+  background: url(../assets/anime-img/Attack\ on\ Titan-episode.jpg) center/cover;
+  margin: 20px 0 20px 20px;
+  width: 150px;
+  height: 100px;
+  border: solid rgb(255, 255, 255) 2px;
+  font-weight: 800;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.content .episode li p{
+  margin: auto; /* Important */
+  font-family: clear;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+.content .episode li:hover{
+  filter: brightness(80%);
+}
+
+
+@media screen  and (max-width: 1500px){
+
+  .menu ul {
+    margin-left: 0px;
+  }
+  
+  .menu ul li{
+    margin-left: 20px;
+  }
+  #setting{
+    display: none;
+  }
+
+  #profil{
+    display: none;
+  }
+}
+
+@media screen  and (max-width: 1300px){
+
+  #planning{
+    display: none;
+  }
+
+  #catalogue{
+    display: none;
+  }
+
+}
+
+@media screen  and (max-width: 1000px){
+
+  .menu{
+    display: none;
+  }
+  .social-panel{
+    display: none;
+  }
+
+  #title{
+    display: none;
+  }
+
+  .hidden-menu{
+    display: flex;
+    align-items: center;
+  }
+
+  #hidden-title{
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar ul {
+    width: 15em;
+    height: 1.5em;
+  }
+  #button{
+    width: 10em;
+    height: 1.5em;
+
+  }
+}
+@media screen  and (max-width: 1000px){
+  .info .head-overlay{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end:2;
+  }
+
+  .info .overlay{
+    width: 18em;
+    height: 23em;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .head{
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .info .synopsis{
+    grid-column-start: 1;
+    grid-column: span 2;
+  }
+
+  .synopsis p{
+    font-size: 0.8rem;
+  }
+  .content{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+  }
+  .content .episode{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-column-gap: 20px;
+  }
+
+  .content .episode li{
+    background: url(../assets/anime-img/Attack\ on\ Titan-episode.jpg) center/cover;
+    margin: 10px 0 10px 10px;
+    max-width: 125px;
+    min-height:75px;
+  }
+
+
+  footer ul{
+    display: grid;
+    padding: 20px 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "li1 li3"
+    "li2 li3";
+  }
+  footer li{
+    margin-bottom: 20px;
+  }
+  .contact{
+    margin-left: 20px;
+    grid-area: li3;
+  }
+  .copyright h1{
+    font-size: 1.5em;
+  }
+  footer ul{
+    display: grid;
+    padding: 20px 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "li1 li3"
+    "li2 li3";
+  }
+  footer li{
+    margin-bottom: 20px;
+  }
+  .contact{
+    margin-left: 20px;
+    grid-area: li3;
+  }
+  .copyright h1{
+    font-size: 1.5em;
+  }
+
+}
