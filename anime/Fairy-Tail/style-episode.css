@@ -337,9 +337,7 @@ section article{
   text-transform: uppercase;
   color: rgb(148, 146, 146);
 }
-.hidden-arrow{
-  display: none;
-}
+
 .episode{
   display: flex;
   min-height: max-content;
@@ -378,6 +376,9 @@ section article{
 }
 .episode button p{
   margin: 10px;
+}
+.hidden-arrow{
+  display: none;
 }
 
 #nametag{

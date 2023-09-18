@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: clear;
-  src: url(../assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf);
+  src: url(../../assets/font/Chau_Philomene_One/ChauPhilomeneOne-Italic.ttf);
 }
 
 @font-face {
   font-family: sf;
-  src: url(../assets/font/SFUIText/);
+  src: url(../../assets/font/SFUIText/);
 }
 
 @font-face {
   font-family: lemonR;
-  src: url(../assets/font/LEMONMILK-Regular.otf);
+  src: url(../../assets/font/LEMONMILK-Regular.otf);
 }
 
 * {
@@ -24,7 +24,7 @@
 
 body {
   color: white;
-  background: url(../assets/img/bckg1.png) center/cover;
+  background: url(../../assets/img/bckg1.png) center/cover;
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
@@ -202,7 +202,7 @@ section{
 }
 
 .head-overlay .overlay{
-  background:url(../assets/anime-img/Attack\ on\ Titan.png) center/cover;
+  background:url(../../assets/anime-img/My-Hero-Academia.jpg) center/cover;
   width: 20em;
   height: 25em;
   border: solid rgb(255, 255, 255) 5px;
@@ -254,7 +254,13 @@ section{
   }
 
   .tag{
+    display: flex;
     margin-top: 20px;
+  }
+
+  .tag li{
+    margin-right: 10px;
+    
   }
 
   .tag li:hover{
@@ -314,7 +320,7 @@ section{
   }
 
   .episode li{
-    background: url(../assets/anime-img/E-Attack\ on\ Titan.jpg) center/cover;
+    background: url(../../assets/anime-img/E-My-Hero-Academia.png) center/cover;
     width: 150px;
     height: 100px;
     border: solid rgb(255, 255, 255) 2px;
@@ -712,7 +718,7 @@ footer .footer-info ul li{
   /* --------------- Section ------------------------  */
 
   .head-overlay .overlay{
-    background:url(../assets/anime-img/Attack\ on\ Titan.png) center/cover;
+    background:url(../../assets/anime-img/Attack\ on\ Titan.png) center/cover;
     width: 20em;
     height: 25em;
   }
