@@ -252,8 +252,12 @@ scroll-behavior: auto;
 section {
   font-family:lemonR ;
   font-size: bold;
-  margin: 40px 20%;
-  width: 58%;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+.section-content{
+  width: 60%;
 }
 
 .band{
@@ -476,6 +480,11 @@ footer .footer-info ul li{
  #catalogue{
    display: none;
  }
+ /* Section */
+
+ .section-content{
+  width: 80%;
+}
 }
 
 @media screen  and (max-width: 1000px){
@@ -511,6 +520,11 @@ footer .footer-info ul li{
     height: 1.5em;
 
   }
+   /* Section */
+
+ .section-content{
+  width: 90%;
+}
 
    /*  ------------- footer -------------------------*/
 
