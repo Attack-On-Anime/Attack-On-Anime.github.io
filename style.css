@@ -177,10 +177,24 @@ body::-webkit-scrollbar-thumb:hover{
   font-weight: 500;
 }
 
+/* ------------------------- Section ------------------------ */
+
+section {
+  font-family:lemonR ;
+  font-size: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.section-content{
+  margin: 2em 0;
+  grid-column-start: 2;
+  grid-column-end: span 4;
+}
+
+
 /* Carousel */
 
 .wrapper {
-  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,17 +262,6 @@ scroll-behavior: auto;
   margin-left: 0px;
 }
 
-/* Section */
-section {
-  font-family:lemonR ;
-  font-size: bold;
-  margin: 2em 0;
-  display: flex;
-  justify-content: center;
-}
-.section-content{
-  width: 60%;
-}
 
 .band{
   margin-top: 30px;
@@ -301,7 +304,6 @@ section {
   background-color: #210464;
 
 }
-
 
 .anime{ 
   display: block;
@@ -482,9 +484,6 @@ footer .footer-info ul li{
  }
  /* Section */
 
- .section-content{
-  width: 80%;
-}
 }
 
 @media screen  and (max-width: 1000px){
@@ -520,12 +519,17 @@ footer .footer-info ul li{
     height: 1.5em;
 
   }
-   /* Section */
+   /* --------------- Section ---------------------- */
 
- .section-content{
-  width: 90%;
-}
+   section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
+  .section-content{
+    margin: 1em;
+    grid-column-start: 1;
+  }
    /*  ------------- footer -------------------------*/
 
    footer #title{
@@ -568,11 +572,12 @@ footer .footer-info ul li{
 
 @media screen and (max-width: 900px) {
   
-  
 
   .carousel img{
     width: calc(100%);
   }
+  /* ----------------- Section --------------- */
+
 
 }
 
@@ -585,6 +590,20 @@ footer .footer-info ul li{
 
 }
 @media screen and (max-width:600px) {
+
+  /* ----------------- Section --------------- */
+
+  .band-content {
+    min-height: 300px;
+  }
+
+  .image-zoom{
+    transition: 300ms;
+    width: 130px;
+    height: 180px;
+    
+  }
+
   /*  ------------- footer -------------------------*/
 
   footer{ 
