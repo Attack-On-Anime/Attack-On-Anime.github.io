@@ -110,9 +110,39 @@
             </ul>
           </div>
 
-          <div class="button">
-            <select name="select" id="lecteur"><option>Episode 1</option><option>Episode 2</option><option>Episode 3</option><option>Episode 4</option><option>Episode 5</option><option>Episode 6</option><option>Episode 7</option><option>Episode 8</option><option>Episode 9</option><option>Episode 10</option><option>Episode 11</option><option>Episode 12</option><option>Episode 13</option><option>Episode 14</option><option>Episode 15</option><option>Episode 16</option><option>Episode 17</option><option>Episode 18</option><option>Episode 19</option><option>Episode 20</option><option>Episode 21</option><option>Episode 22</option><option>Episode 23</option><option>Episode 24</option><option>Episode 25</option></select>
-            <select name="lecteur" id="lecteur"><option>Lecteur 1</option><option>Lecteur 2</option></select>
+          <div class="button" id="select_episode">
+            <select name="select" id="lecteur" >
+              <option>Episode 1 </option>
+              <option>Episode 2</option>
+              <option>Episode 3</option>
+              <option>Episode 4</option>
+              <option>Episode 5</option>
+              <option>Episode 6</option>
+              <option>Episode 7</option>
+              <option>Episode 8</option>
+              <option>Episode 9</option>
+              <option>Episode 10</option>
+              <option>Episode 11</option>
+              <option>Episode 12</option>
+              <option>Episode 13</option>
+              <option>Episode 14</option>
+              <option>Episode 15</option>
+              <option>Episode 16</option>
+              <option>Episode 17</option>
+              <option>Episode 18</option>
+              <option>Episode 19</option>
+              <option>Episode 20</option>
+              <option>Episode 21</option>
+              <option>Episode 22</option>
+              <option>Episode 23</option>
+              <option>Episode 24</option>
+              <option>Episode 25</option>
+            </select>
+            <select name="lecteur" id="lecteur">
+              <option>Lecteur 1</option>
+              <option>Lecteur 2</option>
+            </select>
+
             <button onclick="selectLecteurAA" id="lecteur"> 
               <ul>
                 <li><p>Lecteur AA</p></li>
@@ -129,14 +159,14 @@
         <div class="episode">
           <ul class="episode-content">
             <li>
-              <button > 
+              <button id="previous"> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i></a>
                 <a class="hidden-arrow"><i class="fa-solid fa-circle-arrow-right fa-flip-horizontal fa-2xl " style="color: #ffffff;"></i></a>
                 <p>PRECEDENT</p></button>
             </li>
 
             <li>
-              <button class="center"> 
+              <button class="center" id="last"> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-down fa-lg " style="color: #ffffff;"></i></a>
                 <a class="hidden-arrow"> <i class="fa-solid fa-circle-arrow-right fa-rotate-90 fa-2xl " style="color: #ffffff;"></i></a>
                   <p>DERNIER EPISODE</p>
@@ -144,7 +174,7 @@
             </li>
 
             <li>
-              <button> 
+              <button id="next"> 
                 <p>SUIVANT</p> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-right fa-lg no-hidden" style="color: #ffffff;"></i> </a>
                 <a class="hidden-arrow"><i class="fa-solid fa-circle-arrow-right fa-2xl " style="color: #ffffff;"></i></a>
@@ -154,20 +184,20 @@
         </div>
 
         <div class="player">
-          <iframe  src=https://video.sibnet.ru/shell.php?videoid=4965928&share=1></iframe>
+          <iframe id="player-select" src="https://video.sibnet.ru/shell.php?videoid=5187124" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
 
         <div class="episode">
           <ul class="episode-content">
             <li>
-              <button > 
+              <button id="previous"> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-left fa-lg" style="color: #ffffff;"></i></a>
                 <a class="hidden-arrow"><i class="fa-solid fa-circle-arrow-right fa-flip-horizontal fa-2xl " style="color: #ffffff;"></i></a>
                 <p>PRECEDENT</p></button>
             </li>
 
             <li>
-              <button class="center"> 
+              <button class="center" id="last"> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-down fa-lg " style="color: #ffffff;"></i></a>
                 <a class="hidden-arrow"> <i class="fa-solid fa-circle-arrow-right fa-rotate-90 fa-2xl " style="color: #ffffff;"></i></a>
                   <p>DERNIER EPISODE</p>
@@ -175,7 +205,7 @@
             </li>
 
             <li>
-              <button> 
+              <button id="next"> 
                 <p>SUIVANT</p> 
                 <a class="no-hidden"><i class="fa-solid fa-circle-arrow-right fa-lg no-hidden" style="color: #ffffff;"></i> </a>
                 <a class="hidden-arrow"><i class="fa-solid fa-circle-arrow-right fa-2xl " style="color: #ffffff;"></i></a>
@@ -226,3 +256,41 @@
 </body>
 
 </html>
+
+<script>
+  const videoURLs = [
+  "src=https://video.sibnet.ru/shell.php?videoid=5187124",
+  "https://video.sibnet.ru/shell.php?videoid=5187120",
+  "https://video.sibnet.ru/shell.php?videoid=3&share=1",
+  // Ajoutez autant d'URLs que nécessaire
+];
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Sélectionnez les éléments nécessaires
+  const playerIframe = document.getElementById("player-select");
+  const previousEpisodeButton = document.getElementById("previous");
+  const nextEpisodeButton = document.getElementById("next");
+
+  // ID de la vidéo actuellement affichée
+  let currentVideoIndex = 0; // Mettez l'ID de la première vidéo ici
+
+  // Écoutez le clic sur le bouton "Précédent épisode"
+  previousEpisodeButton.addEventListener("click", function () {
+    if (currentVideoIndex !== 0) {
+      currentVideoIndex = currentVideoIndex - 1; // Décrémente l'ID de la vidéo
+      // Mettez à jour l'URL du lecteur avec la nouvelle vidéo
+      playerIframe.src = videoURLs[currentVideoIndex];
+    }
+  });
+
+  // Écoutez le clic sur le bouton "Épisode suivant"
+  nextEpisodeButton.addEventListener("click", function () {
+    if (currentVideoIndex !== videoURLs.length - 1) {
+      currentVideoIndex = currentVideoIndex + 1; // Incrémente l'ID de la vidéo
+      // Mettez à jour l'URL du lecteur avec la nouvelle vidéo
+      playerIframe.src = videoURLs[currentVideoIndex];;
+    }
+  });
+});
+
+</script>
